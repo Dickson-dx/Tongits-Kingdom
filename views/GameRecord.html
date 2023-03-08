@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Record Details</title>
+    <!-- <link rel="stylesheet" href="../assets/imgs/GameRecord/card.css"> -->
+    <link rel="stylesheet" href="../assets/css/card.css">
+</head>
+
+<body>
+    <div id="app">
+        <div id="all">
+            <img src="../assets/imgs/GameRecord/border_top.png" class="bg">
+            <img src="../assets/imgs/GameRecord/border_mid.png" class="bg" id="mid">
+            <img src="../assets/imgs/GameRecord/border_bottom.png" class="bg">
+            <img src="../assets/imgs/GameRecord/title_details.png" class="title">
+
+            <div id="content">
+                <p id="gamename">Newbie</p>
+                <p id="gametime">2011/06/22 12:00:00</p>
+                <div class="item">
+                    <div class="avatar">
+                        <img src="../assets/imgs/GameRecord/male.jpeg" class="icon">
+                        <img src="../assets/imgs/GameRecord/front.png" class="front">
+                        <p>我是丁真</p>
+                        <img src="../assets/imgs/GameRecord/icon_winner.png" class="state">
+                        <!-- <img src="../assets/imgs/GameRecord/icon_pot.png" class="pot"> -->
+                        <!-- <div class="crown">
+                            <img src="../assets/imgs/GameRecord/icon_crown.png" >
+                            <p>133</p>
+                        </div> -->
+                        
+                    </div>
+                    <div class="rightTop">
+                        <img src="../assets/imgs/GameRecord/text_score.png" class="i1">
+                        <p class="score">123</p>
+                        <p class="reward">32443M</p>
+                        <img src="../assets/imgs/GameRecord/icon_coin.png" class="i2">
+                    </div>
+                    <div class="midPlane"></div>
+                    <div class="bottomPlane"></div>
+                </div>
+                <!-- <div class="specified">
+                    <img src="../assets/imgs/GameRecord/text_specifiedcard.png" class="specified_text">
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+</body>
+<style>
+    @font-face {
+        font-family: latin;
+        src: url("../assets/latin.ttf");
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: latin;
+    }
+
+    body {
+        height: 100vh;
+        background-image: url('../assets/imgs/background.png');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    #app {
+        width: 100%;
+        height: 100vh;
+
+    }
+
+
+
+    #all {
+        position: absolute;
+        padding: 0;
+        width: 582px;
+        margin: 0 auto;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) scale(0.8);
+
+    }
+
+
+    .bg {
+        width: 100%;
+        display: block;
+    }
+
+    .title {
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #mid {
+        height: 900px;
+        /**去除背景图片中间那条缝*/
+        transform: scaleY(1.0015);
+    }
+
+
+    #content {
+        position: absolute;
+        /* background-color: rgb(240, 224, 204, 0.4); */
+        width: 90%;
+        /* height: 900px; */
+        top: 135px;
+        left: 5%;
+        align-content: center;
+    }
+
+
+    .item {
+        position: relative;
+        margin-bottom: 10px;
+        width: 100%;
+        height: 250px;
+        background-color: #FFFB8F;
+        border: 1px solid #F8C80A;
+        border-radius: 15px;
+        top: 10px;
+        visibility: hidden;
+    }
+
+
+    .avatar {
+        position: absolute;
+        width: 100px;
+        height: 120px;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-75%);
+    }
+
+
+    .avatar .icon {
+        position: absolute;
+        width: 92px;
+        height: 92px;
+        border-radius: 50%;
+        overflow: hidden;
+        top: 4px;
+        right: 4px;
+    }
+
+    .avatar .front {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+    }
+
+    .avatar p {
+        position: absolute;
+        color: #9E4D06;
+        text-align: center;
+        width: 100%;
+        overflow: hidden;
+        font-size: 15px;
+        top: 100px;
+        word-break: keep-all;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .state {
+        position: absolute;
+        left: 50%;
+        top: 140px;
+        transform: translateX(-50%);
+    }
+    .pot {
+        position: absolute;
+        left: 50%;
+        top: 165px;
+        transform: translateX(-50%);
+    }
+    .crown {
+        position: absolute;
+        left: 50%;
+        top:-15px;
+        transform: translateX(-50%);
+    }
+    .crown p{
+        position: absolute;
+        color:#B92F1C;
+        left: 50%;
+        top:15px;
+        transform: translateX(-50%);
+    }
+
+
+
+    #gamename {
+        position: absolute;
+        font-size: 24px;
+        color: #7F4C1F;
+        left: 10px;
+        top: -1em;
+    }
+
+    #gametime {
+        position: absolute;
+        font-size: 18px;
+        color: #CE7D31;
+        right: 10px;
+        top: -1em;
+    }
+
+
+
+
+    .rightTop {
+
+        /* background-color: #F8C80A; */
+        position: absolute;
+        right: 5px;
+        top: 10px;
+        width: 400px;
+        height: 34px;
+        line-height: 40px;
+    }
+
+    .rightTop .i1 {
+        float: left;
+        height: 34px;
+    }
+
+    .rightTop .score {
+        float: left;
+        font-size: 34px;
+        line-height: 34px;
+        margin-left: 5px;
+        color: #FFFD61;
+        -webkit-text-stroke: 2px #D07500;
+    }
+
+    .rightTop .reward {
+        float: right;
+        font-size: 24px;
+        line-height: 32px;
+        color: #23A400;
+        margin-right: 5px;
+    }
+
+    .rightTop .i2 {
+        float: right;
+        height: 34px;
+        transform: scale(0.8);
+    }
+
+    .midPlane {
+        position: absolute;
+        top: 50px;
+        right: 5px;
+        width: 400px;
+        height: 100px;
+        background-color: #F8D859;
+        border-radius: 10px;
+    }
+
+    .bottomPlane {
+        position: absolute;
+        bottom: 10px;
+        right: 5px;
+        width: 400px;
+        height: 60px;
+        /* background-color: #F8D859; */
+    }
+
+    .card {
+        position: absolute;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-image: url(../assets/imgs/GameRecord/card.png);
+    }
+
+    .specified {
+        position: absolute;
+        background: url(../assets/imgs/GameRecord/border_specified.png);
+        background-size: 100%;
+        width: 200px;
+        height: 18px;
+    }
+
+    .specified_text {
+        display: block;
+        margin: auto;
+    }
+    .star{
+        display: block;
+        zoom: 0.8;
+    }
+</style>
+<script src="../assets/script/CardHelper.js"></script>
+<script src="../assets/script/GameRecord.js"></script>
+
+
+</html>

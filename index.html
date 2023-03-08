@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Tongits Kingdom-Download & Play Tongits</title>
+        
+        <link rel="stylesheet" type="text/css" href="./assets/css/index.css">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Tongits Kingdom provides free online card games with vertical screen,Free massive gold coins every day,Download & Play Tongits now!">
+        <meta name="keywords" content="Tongits Kingdom, Tongits, Play Tongits, Download Tongits">
+        <!-- 加meta, 具体加什么再看 -->
+        <!-- <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <meta property="og:image" content="${imageUrl}">
+        <meta property="og:title" content="${title}">
+        <meta property="og:description" content="${description}">
+        <meta property="og:locale" content="en_US">
+        <meta property="og:type" content="game">
+        <meta property="og:url" content="${targetUrl}">
+        <meta property="fb:app_id" content="${fbAppId}"> -->
+    </head>
+    <body>
+        <div id="app" style="width:100%;background-image:url('./assets/imgs/background.png');background-repeat: no-repeat;">
+            <!-- <img class="pic-bg" src="./assets/imgs/background.png" alt=""> -->
+            <div style="height: 120px;background-color:rgba(255, 255, 255, 0.1);">
+                <div class="header">
+                    <div class="h-left">
+                        <img src="./assets/imgs/icon.png" style="margin-right:10px;" alt="">
+                        <span>Have fun with your friends!</span>
+                    </div>
+                    <div id="menu-bar" class="h-right">
+                        <ul>
+                            <li class="navactive"><a href="index.html">HOME</a></li>
+                            <li class="menu-bar-item"><a href="index.html">HOW TO PLAY</a></li>
+                            <li class="menu-bar-item"><a href="index.html">HELP</a></li>
+                        </ul>
+                    </div>
+    
+                    <div id="menu-button" class="menu"></div>
+                    <div id="menu-list">
+                        <ul class="right">
+                            <li id="menu-list-item1" class="navactive1"><a href="index.html">HOME</a></li>
+                            <li id="menu-list-item2"><a href="#Howtoplay">HOW TO PLAY</a></li>
+                            <li id="menu-list-item3"><a href="#Help">HELP</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="content" class="content" >
+                <div class="center-left">
+                    <div class="content-left-div1">
+                        <img src="./assets/imgs/tongits.png" alt="">
+                    </div>
+                    <div class="content-left-div2">
+                        <div id="btn-google" class="download-box" style="background-image: url('./assets/imgs/google.png');background-size: cover;">
+                        </div>
+                        <div id="btn-apple" class="download-box" style="background-image: url('./assets/imgs/apple.png');background-size: cover">
+                        </div>
+                        <div id="btn-android" class="download-box" style="background-image: url('./assets/imgs/android.png');background-size: cover">
+                        </div>
+                    </div>
+                </div>
+                <div class="center-right game-pic">
+                    <img src="./assets/imgs/iphone.png" alt="">
+                </div>
+            </div>
+
+            <div id="content-small">
+                <div class="content-left-div1 animation-left-to-right">
+                    <img src="./assets/imgs/tongits.png" alt="">
+                </div>
+                <div class="center-right game-pic animation-right-to-left">
+                    <img src="./assets/imgs/iphone.png" alt="">
+                </div>
+                <div class="content-left-div2 animation-left-to-right">
+                    <div id="box-google" class="download-box" style="background-image: url('./assets/imgs/google.png');background-size: cover;">
+                    </div>
+                    <div id="box-apple" class="download-box" style="background-image: url('./assets/imgs/apple.png');background-size: cover">
+                    </div>
+                    <div id="box-android" class="download-box" style="background-image: url('./assets/imgs/android.png');background-size: cover">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <p><a href="./views/privacy.html">Privacy Policy</a> | <a href="./views/service.html">Term Service</a></p>
+            <p>Contact us by Email</p>
+        </div>
+    </body>
+    <script>
+        const btnGoogle = document.getElementById('btn-google');
+        const btnApple = document.getElementById('btn-apple');
+        const btnAndroid = document.getElementById('btn-android');
+        const boxGoogle = document.getElementById('box-google');
+        const boxApple = document.getElementById('box-apple');
+        const boxAndroid = document.getElementById('box-android');
+        const menuBar = document.getElementById('menu-bar');
+        const menuButton = document.getElementById('menu-button');
+        const menuList = document.getElementById('menu-list');
+        const menuListItem1 = document.getElementById('menu-list-item1');
+        const menuListItem2 = document.getElementById('menu-list-item2');
+        const menuListItem3 = document.getElementById('menu-list-item3');
+        let system = "unknow";
+        window.onload = function () {
+            const ua = navigator.userAgent.toLowerCase();
+            const testUa = regexp => regexp.test(ua);
+            if (testUa(/windows|win32|win64|wow32|wow64/g)) {
+                system = "windows"; // windows系统
+            } else if (testUa(/macintosh|macintel/g)) {
+                system = "macos"; // macos系统
+            } else if (testUa(/x11/g)) {
+                system = "linux"; // linux系统
+            } else if (testUa(/android|adr/g)) {
+                system = "android"; // android系统
+            } else if (testUa(/ios|iphone|ipad|ipod|iwatch/g)) {
+                system = "ios"; // ios系统
+            }
+            if (system === 'ios') {
+                btnGoogle.style.display = 'none';
+                btnAndroid.style.display = 'none';
+                boxGoogle.style.display = 'none';
+                boxAndroid.style.display = 'none';
+            }
+            if (system === 'android') {
+                btnApple.style.display = 'none';
+                boxApple.style.display = 'none';
+            }
+        }
+        btnAndroid.onclick = () => {
+            window.open("./assets/packages/tongits-kingdom.apk");
+        }
+        boxAndroid.onclick = () => {
+            window.open("./assets/packages/tongits-kingdom.apk");
+        }
+        menuListItem1.onclick = () => {
+            menuListItem1.classList.add("navactive1");
+            menuListItem2.classList.remove("navactive1");
+            menuListItem3.classList.remove("navactive1");
+        }
+        menuListItem2.onclick = () => {
+            menuListItem2.classList.add("navactive1");
+            menuListItem1.classList.remove("navactive1");
+            menuListItem3.classList.remove("navactive1");
+        }
+        menuListItem3.onclick = () => {
+            menuListItem3.classList.add("navactive1");
+            menuListItem1.classList.remove("navactive1");
+            menuListItem2.classList.remove("navactive1");
+        }
+
+        let height = 0, display = false, timer, ifShow = false;
+            
+        const step = function() {
+            height = display? (height + 10): (height - 10);
+            if (height < 0) {
+                height = 0;    
+            } else if (height > 150) {
+                height = 150;    
+            }
+            menuList.style.height = height + "px";
+            if (height > 0 && height < 150) {
+                timer = setTimeout(step, 30);
+            }
+        };
+        
+        menuButton.onclick = function() {
+            menuList.style.display = ifShow ? 'none' : 'block';
+            if (timer) clearTimeout(timer)
+            display = !display;
+            step();
+            return false;
+        };
+
+        window.onresize = function() {
+            if (document.body.clientWidth > 1000) {
+                ifShow = false;
+                menuList.style.display = 'none';
+            }
+        }
+
+        btnGoogle.onclick = function() {
+            window.open('https://play.google.com/store/apps/details?id=com.stotsenberg.tongitskingdom');
+        }
+        btnApple.onclick = function() {
+            window.open('https://apps.apple.com/ph/app/tongits-kingdom/id1658682891');
+        }
+        boxGoogle.onclick = function() {
+            window.open('https://play.google.com/store/apps/details?id=com.stotsenberg.tongitskingdom');
+        }
+        boxApple.onclick = function() {
+            window.open('https://apps.apple.com/ph/app/tongits-kingdom/id1658682891');
+        }
+    </script>
+</html>

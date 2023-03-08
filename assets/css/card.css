@@ -1,0 +1,66 @@
+/* -----------------------------------------------------
+   created with https://www.codeandweb.com/texturepacker 
+   -----------------------------------------------------
+   $TexturePacker:SmartUpdate:8a92622d7989ba1fca750711d9b631a7:0103fb95fff03aa3fc14621614ef8573:093058c68ef2de014231f0e07ec96b5e$
+   -----------------------------------------------------
+
+   usage: <span class="{-spritename-} sprite"></span>
+
+   replace {-spritename-} with the sprite you like to use
+
+*/
+
+.sprite {display:inline-block; overflow:hidden; background-repeat: no-repeat;background-image:url(card.png);}
+
+.card_1 {width:42px; height:59px; background-position: -0px -0px}
+.card_10 {width:42px; height:59px; background-position: -0px -177px}
+.card_11 {width:42px; height:59px; background-position: -42px -177px}
+.card_12 {width:42px; height:59px; background-position: -84px -177px}
+.card_13 {width:42px; height:59px; background-position: -0px -236px}
+.card_14 {width:42px; height:59px; background-position: -42px -236px}
+.card_15 {width:42px; height:59px; background-position: -84px -236px}
+.card_16 {width:42px; height:59px; background-position: -0px -295px}
+.card_17 {width:42px; height:59px; background-position: -42px -295px}
+.card_18 {width:42px; height:59px; background-position: -84px -295px}
+.card_19 {width:42px; height:59px; background-position: -0px -354px}
+.card_2 {width:42px; height:59px; background-position: -42px -0px}
+.card_20 {width:42px; height:59px; background-position: -42px -354px}
+.card_21 {width:42px; height:59px; background-position: -84px -354px}
+.card_22 {width:42px; height:59px; background-position: -0px -413px}
+.card_23 {width:42px; height:59px; background-position: -42px -413px}
+.card_24 {width:42px; height:59px; background-position: -84px -413px}
+.card_25 {width:42px; height:59px; background-position: -0px -472px}
+.card_26 {width:42px; height:59px; background-position: -42px -472px}
+.card_27 {width:42px; height:59px; background-position: -84px -472px}
+.card_28 {width:42px; height:59px; background-position: -0px -531px}
+.card_29 {width:42px; height:59px; background-position: -42px -531px}
+.card_3 {width:42px; height:59px; background-position: -84px -0px}
+.card_30 {width:42px; height:59px; background-position: -84px -531px}
+.card_31 {width:42px; height:59px; background-position: -0px -590px}
+.card_32 {width:42px; height:59px; background-position: -42px -590px}
+.card_33 {width:42px; height:59px; background-position: -84px -590px}
+.card_34 {width:42px; height:59px; background-position: -0px -649px}
+.card_35 {width:42px; height:59px; background-position: -42px -649px}
+.card_36 {width:42px; height:59px; background-position: -84px -649px}
+.card_37 {width:42px; height:59px; background-position: -0px -708px}
+.card_38 {width:42px; height:59px; background-position: -42px -708px}
+.card_39 {width:42px; height:59px; background-position: -84px -708px}
+.card_4 {width:42px; height:59px; background-position: -0px -59px}
+.card_40 {width:42px; height:59px; background-position: -0px -767px}
+.card_41 {width:42px; height:59px; background-position: -42px -767px}
+.card_42 {width:42px; height:59px; background-position: -84px -767px}
+.card_43 {width:42px; height:59px; background-position: -0px -826px}
+.card_44 {width:42px; height:59px; background-position: -42px -826px}
+.card_45 {width:42px; height:59px; background-position: -84px -826px}
+.card_46 {width:42px; height:59px; background-position: -0px -885px}
+.card_47 {width:42px; height:59px; background-position: -42px -885px}
+.card_48 {width:42px; height:59px; background-position: -84px -885px}
+.card_49 {width:42px; height:59px; background-position: -0px -944px}
+.card_5 {width:42px; height:59px; background-position: -42px -59px}
+.card_50 {width:42px; height:59px; background-position: -42px -944px}
+.card_51 {width:42px; height:59px; background-position: -84px -944px}
+.card_52 {width:42px; height:59px; background-position: -0px -1003px}
+.card_6 {width:42px; height:59px; background-position: -84px -59px}
+.card_7 {width:42px; height:59px; background-position: -0px -118px}
+.card_8 {width:42px; height:59px; background-position: -42px -118px}
+.card_9 {width:42px; height:59px; background-position: -84px -118px}
