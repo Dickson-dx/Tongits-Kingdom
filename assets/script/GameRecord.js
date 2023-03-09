@@ -1,3 +1,4 @@
+"user strict"
 const CardColor = {
     "Diamond": 0,
     "Club": 1,
@@ -30,11 +31,12 @@ const colors = ["#23A400", "#E70000"];
 
 /**初始化 */
 async function init() {
-    const me=10441;//我方uid，之后要获取真实id
+    // const me=10441;//我方uid，之后要获取真实id
     const content = document.getElementById('content');
     const mid = document.getElementById('mid');
     const items = [];
-    const details = await getData();
+    // const details = await getData();
+    const details = await getDetail(getGameId());
     items.push(getItem());
     for (let i = 0; i < 2; i++) {//创建item
         const it = createItem();
@@ -43,8 +45,8 @@ async function init() {
     }
     items.map((it, i) => {//显示item
         const isWin = i == 0;
-        // const isMe = Math.random() < 0.4;
-        const isMe = details.userInfoList[i].uid.toString() == me;
+        // const isMe = details.userInfoList[i].uid.toString() == me;
+        const isMe=isWin;//没有用户id,就只显示胜者为黄色底
         const midPlane = it.getElementsByClassName('midPlane')[0];
         const userInfo = details.userInfoList[i];
         !isMe && setItemNoMe(it);
@@ -90,13 +92,14 @@ function addCardGroup(plane, droppedMeld) {
             const p = revisePos(cardPos.array[i][index]);
             const cardNode = createCard(card.id, p.x, p.y);
             plane.appendChild(cardNode)
-            showStar(cardNode,card,true)
+            showStar(cardNode,card,false)//之后牌上有对应用户id才改isMycard参数
         })
     })
     return cardPos.rows;
 }
 /**手牌区添加牌组 */
 function addHandCardGroup(plane, cards) {
+    if(!cards||cards.length==0)return;
     const groups = getBestGroups(cards);
     const cardPos = getPos(groups);
     groups.map((v, i) => {
