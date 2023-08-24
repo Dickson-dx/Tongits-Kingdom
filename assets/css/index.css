@@ -17,6 +17,21 @@ a {
     -moz-user-focus: none;
     -moz-user-select: none;
 }
+.text-red {
+    color: #ff0000;
+}
+.text-bold {
+    font-weight: 900;
+}
+.pt-10 {
+    padding-top: 10px;
+}
+.pb-10 {
+    padding-bottom: 10px;
+}
+.mr-10 {
+    margin-right: 10px;
+}
 
 /* Header 即顶部 css */
 .header {
@@ -114,24 +129,25 @@ li:hover ~ li::before {
     list-style-type: none;
     cursor: pointer;
 }
-.navactive {
+.navactive-home {
     width: 90px;
-    border-bottom: 6px solid #d1b8ff;
 }
-.navactive1 {
+.navactive-home-menu {
     width: 100%;
     margin: 0;
     margin-block-start: 0;
     margin-block-end: 0;
-    border-bottom: 6px solid #d1b8ff;
 }
 .menu-bar-item:hover {
+    border-bottom: 6px solid #d1b8ff;
+}
+.li-bottom-border {
     border-bottom: 6px solid #d1b8ff;
 }
 
 /* 中间 内容区域 */
 .content {
-        /* margin: 0 auto; */
+    /* margin: 0 auto; */
     display: flex;
     flex-flow: wrap;
     /* justify-content: space-between; */
@@ -179,6 +195,61 @@ li:hover ~ li::before {
     height: 100%;
     padding-top: 50px;
     transform: translateX(60px);
+}
+
+/* How to play */
+/* 基本的样式设置 */
+.content-howToPlay {
+    display: flex;
+    width: 900px; /* 设置整个容器的宽度 */
+    min-height: 800px;
+    margin: 20px auto; /* 居中显示 */
+    flex-flow: wrap;
+    flex-direction: row;
+    justify-content: center;
+    color: #ffffff;
+    padding-top: 6px;
+}
+
+.howToPlay-tab {
+    flex: 2; /* 左侧占据一部分宽度 */
+    height: 312px;
+    background-color: transparent; /* 透明背景 */
+    background-color: #7265d7;
+    margin-top: 5px;
+}
+
+.howToPlay-content {
+    flex: 5; /* 右侧占据更多的宽度 */
+    padding-left: 30px;
+}
+
+.tab {
+    padding: 15px 20px 15px 25px;
+    cursor: pointer;
+    background-color: transparent; /* 透明背景 */
+    border: none; /* 去除边框 */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.tab.active {
+    background-color: #ffe7f6; /* 设置当前选中标签的背景颜色 */
+    color: #945da9; /* 设置当前选中标签的文本颜色 */
+}
+
+#tab6Content img {
+    transform: scale(0.6);
+    transform-origin: left top; /* 左上角为基准点 */
+}
+
+.howToPlay-content-return-btn {
+    display: none;
+}
+
+.howToPlay-content-title-box {
+    width: 100%;
+    height: 20px;
+    display: none;
 }
 
 /* 底部 */
