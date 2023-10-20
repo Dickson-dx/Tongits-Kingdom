@@ -1,538 +1,939 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Tongits Kingdom-Download & Play Tongits</title>
-        
-        <link rel="stylesheet" type="text/css" href="./assets/css/index.css">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tongits Kingdom-Download & Play Tongits</title>
 
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="Tongits Kingdom provides free online card games with vertical screen,Free massive gold coins every day,Download & Play Tongits now!">
-        <meta name="keywords" content="Tongits Kingdom, Tongits, Play Tongits, Download Tongits">
-        <link rel="icon" type="image/png" href="./assets/icon/16.png" sizes="16x16">
-        <link rel="icon" type="image/png" href="./assets/icon/32.png" sizes="32x32">
-        <link rel="icon" type="image/png" href="./assets/icon/48.png" sizes="48x48">
-        <link rel="icon" type="image/png" href="./assets/icon/72.png" sizes="72x72">
-        <link rel="icon" type="image/png" href="./assets/icon/96.png" sizes="96x96">
-        <link rel="icon" type="image/png" href="./assets/icon/144.png" sizes="144x144">
-        <link rel="icon" type="image/png" href="./assets/icon/192.png" sizes="192x192">
-        <link rel="icon" type="image/png" href="./assets/icon/196.png" sizes="196x196">
-    </head>
-    <body>
-        <div id="app" style="width:100%;background-image:url('./assets/imgs/background.png');background-repeat: no-repeat;">
-            <div id="box-header" style="width:100%;height:120px;background-color:rgba(255, 255, 255, 0.1);">
-                <div class="header">
-                    <div class="h-left">
-                        <img src="./assets/imgs/icon.png" style="margin-right:10px;" alt="">
-                        <span>Have fun with your friends!</span>
-                    </div>
-                    <div id="menu-bar" class="h-right">
-                        <ul>
-                            <li id="home-tab1" onclick="switchHomeTab(0)"><a href="#">HOME</a></li>
-                            <li id="home-tab2" class="menu-bar-item" onclick="switchHomeTab(1)"><a href="#">HOW TO PLAY</a></li>
-                            <li id="home-tab3" class="menu-bar-item" onclick="switchHomeTab(2)"><a href="#">HELP</a></li>
-                        </ul>
-                    </div>
-    
-                    <div id="menu-button" class="menu"></div>
-                    <div id="menu-list">
-                        <ul class="right">
-                            <li id="menu-list-item1" class="navactive-home-menu"><a onclick="switchHomeTab(0, true)" href="#">HOME</a></li>
-                            <li id="menu-list-item2"><a onclick="switchHomeTab(1, true)" href="#">HOW TO PLAY</a></li>
-                            <li id="menu-list-item3"><a onclick="switchHomeTab(2, true)" href="#">HELP</a></li>
-                        </ul>
-                    </div>
-                </div>
+    <link rel="stylesheet" type="text/css" href="./assets/css/index.css" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Tongits Kingdom provides free online card games with vertical screen,Free massive gold coins every day,Download & Play Tongits now!"
+    />
+    <meta
+      name="keywords"
+      content="Tongits Kingdom, Tongits, Play Tongits, Download Tongits"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./assets/icon/16.png"
+      sizes="16x16"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./assets/icon/32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./assets/icon/48.png"
+      sizes="48x48"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./assets/icon/72.png"
+      sizes="72x72"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./assets/icon/96.png"
+      sizes="96x96"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./assets/icon/144.png"
+      sizes="144x144"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./assets/icon/192.png"
+      sizes="192x192"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./assets/icon/196.png"
+      sizes="196x196"
+    />
+  </head>
+  <body>
+    <div
+      id="app"
+      style="
+        width: 100%;
+        background-image: url('./assets/imgs/background.png');
+        background-repeat: no-repeat;
+      "
+    >
+      <div
+        id="box-header"
+        style="
+          width: 100%;
+          height: 120px;
+          background-color: rgba(255, 255, 255, 0.1);
+        "
+      >
+        <div class="header">
+          <div class="h-left">
+            <img
+              src="./assets/imgs/icon.png"
+              style="margin-right: 10px"
+              alt=""
+            />
+            <span>Have fun with your friends!</span>
+          </div>
+          <div id="menu-bar" class="h-right">
+            <ul>
+              <li id="home-tab1" onclick="switchHomeTab(0)">
+                <a href="#">HOME</a>
+              </li>
+              <li
+                id="home-tab2"
+                class="menu-bar-item"
+                onclick="switchHomeTab(1)"
+              >
+                <a href="#">HOW TO PLAY</a>
+              </li>
+              <li
+                id="home-tab3"
+                class="menu-bar-item"
+                onclick="switchHomeTab(2)"
+              >
+                <a href="#">HELP</a>
+              </li>
+            </ul>
+          </div>
+
+          <div id="menu-button" class="menu"></div>
+          <div id="menu-list">
+            <ul class="right">
+              <li id="menu-list-item1" class="navactive-home-menu">
+                <a onclick="switchHomeTab(0, true)" href="#">HOME</a>
+              </li>
+              <li id="menu-list-item2">
+                <a onclick="switchHomeTab(1, true)" href="#">HOW TO PLAY</a>
+              </li>
+              <li id="menu-list-item3">
+                <a onclick="switchHomeTab(2, true)" href="#">HELP</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div id="box-content">
+        <div id="content" class="content">
+          <div class="center-left">
+            <div class="content-left-div1">
+              <img src="./assets/imgs/tongits.png" alt="" />
             </div>
-            
-            <div id="box-content">
-                <div id="content" class="content" >
-                    <div class="center-left">
-                        <div class="content-left-div1">
-                            <img src="./assets/imgs/tongits.png" alt="">
-                        </div>
-                        <div class="content-left-div2">
-                            <div id="btn-google" class="download-box" style="background-image: url('./assets/imgs/google.png');background-size: cover;">
-                            </div>
-                            <div id="btn-apple" class="download-box" style="background-image: url('./assets/imgs/apple.png');background-size: cover">
-                            </div>
-                            <div id="btn-android" class="download-box" style="background-image: url('./assets/imgs/android.png');background-size: cover">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="center-right game-pic">
-                        <img src="./assets/imgs/iphone.png" alt="">
-                    </div>
-                </div>
-    
-                <div id="content-small">
-                    <div class="content-left-div1 animation-left-to-right">
-                        <img src="./assets/imgs/tongits.png" alt="">
-                    </div>
-                    <div class="center-right game-pic animation-right-to-left">
-                        <img src="./assets/imgs/iphone.png" alt="">
-                    </div>
-                    <div class="content-left-div2 animation-left-to-right">
-                        <div id="box-google" class="download-box" style="background-image: url('./assets/imgs/google.png');background-size: cover;">
-                        </div>
-                        <div id="box-apple" class="download-box" style="background-image: url('./assets/imgs/apple.png');background-size: cover">
-                        </div>
-                        <div id="box-android" class="download-box" style="background-image: url('./assets/imgs/android.png');background-size: cover">
-                        </div>
-                    </div>
-                </div>
+            <div class="content-left-div2">
+              <!-- <div id="btn-google" class="download-box" style="background-image: url('./assets/imgs/google.png');background-size: cover;">
+                            </div> -->
+              <div
+                id="btn-apple"
+                class="download-box"
+                style="
+                  background-image: url('./assets/imgs/apple.png');
+                  background-size: cover;
+                "
+              ></div>
+              <div
+                id="btn-android"
+                class="download-box"
+                style="
+                  background-image: url('./assets/imgs/android.png');
+                  background-size: cover;
+                "
+              ></div>
             </div>
-
-            <div id="box-howToPlay">
-                <div id="content-howToPlay" class="content-howToPlay">
-                    <div id="howToPlay-tab" class="howToPlay-tab">
-                        <div class="tab pt-10" onclick="showTab(0)">Tongits Rules</div>
-                        <div class="tab" onclick="showTab(1)">How to play?</div>
-                        <div class="tab" onclick="showTab(2)">Meld</div>
-                        <div class="tab" onclick="showTab(3)">Winning</div>
-                        <div class="tab" onclick="showTab(4)">POT Prize Pool Rules</div>
-                        <div class="tab pb-10" onclick="showTab(5)">Button Description</div>
-                    </div>
-                    <div id="howToPlay-content" class="howToPlay-content">
-                        <div id="howToPlay-content-return-btn" onclick="returnToTabList" class="howToPlay-content-return-btn">
-                            <img src="./assets/imgs/howToPlay/return.png" alt="">
-                        </div>
-
-                        <div id="howToPlay-content-title-box" class="howToPlay-content-title-box">
-                            <h3 id="howToPlay-content-title" style="text-align: center;"></h3>
-                        </div>
-                        <!-- 内容区域 -->
-                        <div id="tab1Content" class="howToPlay-content-div">
-                            <p>Tongits Kingdom is a popular mobile app version of the classic Filipino card game, Tongits.</p>
-                            <p>The goal of the game is to form sets or "melds" of three or more cards of the same rank and suit, such as three 9s of hearts or three Jacks of spades. Players can also form meld called "Secret Meld" which consist of Four of a Kind or Straight Flush</p>
-                            <p>On every turn, players can draw one card from the deck or pick up one card from the discarded pile. They can then either form melds with their cards, add cards to existing melds, or discard one card to the discard pile. The game continues until one player wins by either going "Tongits" (having a meld of zero point value with all cards exposed) or having the lowest point value remaining in their hand when the deck runs out.</p>
-                            <p>In Tongits Kingdom, players can also participate in fights and challenges with other players to gain an advantage. A fight is initiated by placing a meld on the table and no player dropping a card on it during the round. A challenge is initiated by a player who believes they have the lowest point value remaining in their hand.</p>
-                            <h3>◆Service Fee</h3>
-                            <p>The system deducts 5% of the winner's winnings as a service fee.</p>
-                        </div>
-                        <div id="tab2Content" class="howToPlay-content-div" style="display: none;">
-                            <p>1.Tongits is a game played by 3 players using a deck of 52 standard playing cards. Each player starts with 12 cards, except for the starting player who has 13 cards. The remaining cards are placed in the central stack. </p>
-                            <p>2.At the beginning of each game, the cards will be shuffled. After determining the starting player, the system will deal the cards clockwise while the players play counterclockwise.</p>
-                            <p>3.The starting player is randomly selected for the first game, while the winner of the previous game goes first in the second game. If the starting player quits during a game, a new starting player will be randomly selected in the next round.</p>
-                            <p>4.When it is the player's turn, the player's avatar will show a countdown which if it ends and the player has not played any card, the system will automatically dump the highest card.</p>
-                            <p>5.After the previous player dumped the card. If this card can be grouped by the next player's card, the player can choose to take the dumped card or draw a new card from the draw pile. If this card could not be grouped, the next player will get a card from the draw pile.</p>
-                            <p>6.Next, the player must collect any possible hand melds and discard any unnecessary cards. 
-                                The process of picking and discarding cards continues until a player wins by declaring "Tong-its", calling a draw, or until there are no more cards left in the central stack. If the central stack runs out, points will be calculated from the cards in their hands, and the player with the lowest total score wins. In the case of a tie, the player who drew the last card from the central deck is declared as the winner.</p>
-                            <p>7.Cards that can be added to all exposed sets of cards cannot be discarded.</p>
-                            <p>8.When each countdown ends, if the player has not taken any action, the system will automatically draw a card or discard one. For offline players, the system will take over and perform the draw or discard actions on behalf of the offline player.</p>
-                        </div>
-                        <div id="tab3Content" class="howToPlay-content-div" style="display: none;">
-                            <div>
-                                <p>1.Melds are sets of cards that are grouped together in a specific way. While melds do not directly contribute points to a player's score, they are an important part of the game strategy. This is because certain melds can help players to reduce the point count in their hand by allowing them to get rid of high-scoring cards.</p>
-                                <p>In a Tongits duel, players may try to form sets and melds to gain an advantage over their opponents. However, if a player does not have any sets or melds in the show card or special card during a duel, their cards will be burned.</p>
-                            </div>
-                            <div>
-                                <p>2.Types of meld:</p>
-                                <p>Sets: A set consists of three cards of the same rank. For example, a set can be made up of three Kings, three 7s, or three Aces.	</p>
-                                <p>Run: A run consists of three or more cards of consecutive ranks in the same suit. For example, a run can be made up of 3♥️, 4♥️, and 5♥️, or 8♠️, 9♠️, 10♠️, and J♠️.</p>
-                                <br>
-                                <div>
-                                    <p>Three of a Kind: three equally ranked cards</p>
-                                    <img src="./assets/imgs/howToPlay/AAA.png" alt="">
-                                </div>
-                                <div>
-                                    <p>Four of a Kind: four cards of the same rank/number</p>
-                                    <img src="./assets/imgs/howToPlay/KKKK.png" alt="">
-                                </div>
-                                <div>
-                                    <p>Straight Flush: At least three consecutive cards of the suit.</p>
-                                    <img src="./assets/imgs/howToPlay/234.png" alt="">
-                                    <img src="./assets/imgs/howToPlay/678910J.png" alt="">
-                                </div>
-                                <div>
-                                    <p>Secret Meld: Four cards of the same rank or five or more consecutive card 
-                                        of the same suit.</p>
-                                    <img src="./assets/imgs/howToPlay/kkkksc.png" alt="">
-                                    <img src="./assets/imgs/howToPlay/a2345sc.png" alt="">
-                                </div>
-                            </div>
-                            <p>At the end of the game, a player with a Secret Meld in their hand will not have their cards burned.</p>
-                            <p>If a player contains only normal meld sets and there are no exposed sets on the table, they are not allowed to initiate a Fight or Challenge.</p>
-                            <p>A player with a Secret Meld can participate in a Fight initiated by another player, even if they have no exposed sets on the table.</p>
-                            <p></p>
-                            <p></p>
-                        </div>
-                        <div id="tab4Content" class="howToPlay-content-div" style="display: none;">
-                            <p>Try to play all your cards as quickly as possible before the remaining cards are depleted. The fewer cards in your hand, the lower the total point value, and the greater the chance of winning.</p>
-                            <br>
-                    
-                            <h3>ADDITIONAL DETAILS</h3>
-                            <h4>◆Tongits</h4>
-                            <p>If a player can put all their cards in the open area or discard them all, and the total point value of the meld is 0,then the player wins with Tongits.</p>
-                            <br>
-                            
-                            <h4>◆Fight</h4>
-                            <p>To start a fight, the player needs to put down a meld onto the table, and no player drops any card on any of his/her meld in that round.</p>
-                            <br>
-                    
-                            <h4>◆Challenge</h4>
-                            <p>When a player initiates a fight, if there is a meld on the show cards or a player has a special card, another player can challenge. Players can accept or fold. If a player fails to choose either accept or fold, after the countdown, the system will automatically fold the player's card.</p>
-                            <br>
-                    
-                            <h4>◆Burned</h4>
-                            <p>If a player does not have any meld in their open card area or any secret set in their hand, the cards will be burned.</p>
-                            <br>
-                    
-                            <h4>◆End of the Game</h4>
-                            <p>When all the cards have been drawn from the deck, the game ends.</p>
-                            <p>Players without a meld or secret meld set in the open area will be burned and lose the game. The player with the lowest remaining point value wins.</p>
-                            <br>
-                    
-                            <h4>◆Early Exit & Disconnection</h4>
-                            <p>If a player exits or disconnects during the game, they will enter into an AI mode, where the AI will automatically play the game for them. Players can reconnect to the room to continue playing the game if the game is still ongoing. Otherwise, they will enter into a new game again.</p>
-                            <br>
-                    
-                            <h4>◆Tie-breaker</h4>
-                            <p>If a player initiates a challenge, and two players have the same point value, the player who accepts the challenge wins. If three players have the same point value, the player (player 1) who initiates the challenge's next player (player 2) wins.</p>
-                            <p>If all cards have been drawn and multiple players have the same minimum point value, the player who drew the last card wins. If the player who drew the last card has the highest point value, and the other two players have the same lower point value, then the next player who drew the last card wins.</p>
-                            <br>
-                    
-                            <h4>◆Card Points</h4>
-                            <div>
-                                <p>(A)Ace represents 1 point.</p>
-                                <div style="display: flex; align-items: center;">
-                                    <img class="d-inline-block mr-10" src="./assets/imgs/howToPlay/A.png" alt=""> <p>= 1</p>
-                                </div>
-                                <p>All J Q K represent 10 points.</p>
-                                <div style="display: flex; align-items: center;">
-                                    <img class="d-inline-block mr-10" src="./assets/imgs/howToPlay/JQK.png" alt=""> <p>= 10</p>
-                                </div>
-                                <p>All other cards (2 3 4 5 6 7 8 9 10) are worth their own point value.</p>
-                            </div>
-                            <br>
-                    
-                            <h4>◆Bonus Cards</h4>
-                            <p>A and K in the winner's meld or hand count as bonus cards. For each A or K in the winning meld or hand, the bonus increases by 1.</p>
-                            <p>A and K placed in the winner's meld by other players, or A and K placed in other players' melds by the winner, do not count as bonus cards.</p>
-                            <br>
-                    
-                            <h4>◆Bonus Count</h4>
-                            <p>Normal win: 1</p>
-                            <p>Tongits: 1</p>
-                            <p>Win challenge: 2</p>
-                            <p>Special Card (A/K card): 1 (multiplied by the number of A/K cards in the winning meld)</p>
-                            <img src="./assets/imgs/howToPlay/ak.png" alt="">
-                            <p>Secret Meld: 1 (multiplied by the number of secret meld)</p>
-                            <img src="./assets/imgs/howToPlay/kkkksc.png" alt="">
-                            <br>
-                    
-                            <h4>◆Settlement Rules</h4>
-                            <p>Winner’s coins = (normal win + tongits win + challenge win + special card win x no. of cards + secret meld win x no. of cards) x bet amount x multiplier - service fee</p>
-                            <p>Loser’s coins = (normal win + tongits win + challenge win + special card win x no. of cards + secret meld win x no. of cards + burned) x bet amount x multiplier - service fee</p>
-                            <p>* After winning, if there are no tongits , special card, secret meld or special rewards, these will be recorded as 0 in the computation.</p>
-                            <p>* If a player has a “challenge win”, the “burned” will be 0. If a player has “burned”, the “challenge win” will be 0.</p>
-                            <p></p>
-                            <br>
-                        </div>
-                        <div id="tab5Content" class="howToPlay-content-div" style="display: none;">
-                            <p>1.At the start of each game, each player will contribute X coins to the POT prize pool. (X is the base score of the room, for example, when entering the newbie room with a base score of 1, 1 coin will automatically be deducted and added to the POT prize pool)</p>
-                            <p>2.The player who wins each game will receive a crown, and a player who wins two consecutive crowns will win all the coins in the POT prize pool.</p>
-                            <p>3.The number on the crown represents the game number, 1 for the first game, 2 for the second game, and so on.</p>
-                            <p>4.If a player exits the room during the game, the coins they contributed to the POT prize pool will remain in the pool and will be won by other players in the end. Therefore, no refunds will be issued.</p>
-                        </div>
-                        <div id="tab6Content" class="howToPlay-content-div" style="display: none;">
-                            <div>
-                                <p><span class="text-bold">● Draw:</span> Draw a card from the deck.</p>
-                                <img src="./assets/imgs/howToPlay/text_draw.png" alt="">
-                            </div>
-                            
-                            <div>
-                                <p><span class="text-bold">● Chow:</span> Combine a card from the previous player with your own cards to form a group and place it in the exposed cards area. If you can form a group with a card from the previous player and your own cards, it will appear. Clicking on Chow or the card discarded by the previous player will automatically place it in the exposed cards area. If there are multiple meld, you must click on the meld that you do not need to take it back to your hand.</p>
-                                <img src="./assets/imgs/howToPlay/text_chow.png" alt="">
-                            </div>
-                    
-                            <div>
-                                <p><span class="text-bold">● Group:</span> Combine the selected cards together. Green groups can be placed in the exposed cards area, while red groups cannot.</p>
-                                <img src="./assets/imgs/howToPlay/text_group.png" alt="">
-                            </div>
-                    
-                            <div>
-                                <p><span class="text-bold">● Drop:</span> Place combined cards from your hand in your own exposed cards area.</p>
-                                <img src="./assets/imgs/howToPlay/text_drop.f.png" alt="">
-                            </div>
-                    
-                            <div>
-                                <p><span class="text-bold">● Sapaw:</span> ●Place a card on a card in the exposed cards area that can be combined with it.</p>
-                                <img src="./assets/imgs/howToPlay/text_sapaw.png" alt="">
-                            </div>
-                    
-                            <div>
-                                <p><span class="text-bold">● Dump:</span> Discard a card to the discard pile.</p>
-                                <img src="./assets/imgs/howToPlay/text_dump.png" alt="">
-                            </div>
-                    
-                            <div>
-                                <p><span class="text-bold">● Fight:</span> ●Initiate a duel to compare the point values with other players to determine the winner of the game.</p>
-                                <img src="./assets/imgs/howToPlay/text_fight.png" alt="">
-                            </div>
-                    
-                            <div>
-                                <p><span class="text-bold">● Challenge:</span> ●Accept a duel to compare the point values with other players to determine the winner of the game.</p>
-                                <img src="./assets/imgs/howToPlay/text_challenge.png" alt="">
-                            </div>
-                    
-                            <div>
-                                <p><span class="text-bold">● Fold:</span> Give up the duel and concede the game.</p>
-                                <img src="./assets/imgs/howToPlay/text_fold.png" alt="">
-                            </div>
-                    
-                            <div>
-                                <p><span class="text-bold">● Sort Again:</span> ●Sort your hand in order of cards with the same suit or in order of combined cards and point values.</p>
-                                <img src="./assets/imgs/howToPlay/btn_order.png" alt="">
-                            </div>
-                    
-                            <p>Upon starting the game, players will enter a preparation phase and must wait for all three players to be ready before the game starts. If a player disconnects or leaves during this time, the system will take over until the player reconnects to the game. After each match, there is a 10 seconds preparation period for the next match. If a player does not prepare within 10 seconds, they will automatically exit the room.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+          </div>
+          <div class="center-right game-pic">
+            <img src="./assets/imgs/iphone.png" alt="" />
+          </div>
         </div>
 
-        <div class="footer">
-            <p><a href="./views/privacy.html">Privacy Policy</a> | <a href="./views/service.html">Term Service</a></p>
-            <p>Contact us by Email</p>
+        <div id="content-small">
+          <div class="content-left-div1 animation-left-to-right">
+            <img src="./assets/imgs/tongits.png" alt="" />
+          </div>
+          <div class="center-right game-pic animation-right-to-left">
+            <img src="./assets/imgs/iphone.png" alt="" />
+          </div>
+          <div class="content-left-div2 animation-left-to-right">
+            <!-- <div id="box-google" class="download-box" style="background-image: url('./assets/imgs/google.png');background-size: cover;">
+                        </div> -->
+            <div
+              id="box-apple"
+              class="download-box"
+              style="
+                background-image: url('./assets/imgs/apple.png');
+                background-size: cover;
+              "
+            ></div>
+            <div
+              id="box-android"
+              class="download-box"
+              style="
+                background-image: url('./assets/imgs/android.png');
+                background-size: cover;
+              "
+            ></div>
+          </div>
         </div>
-    </body>
-    <script>
-        /** 获取 element */
-        const app = document.getElementById('app');
-        const btnGoogle = document.getElementById('btn-google');
-        const btnApple = document.getElementById('btn-apple');
-        const btnAndroid = document.getElementById('btn-android');
-        const boxGoogle = document.getElementById('box-google');
-        const boxApple = document.getElementById('box-apple');
-        const boxAndroid = document.getElementById('box-android');
-        const menuBar = document.getElementById('menu-bar');
-        const menuButton = document.getElementById('menu-button');
-        const menuList = document.getElementById('menu-list');
-        const menuListItem1 = document.getElementById('menu-list-item1');
-        const menuListItem2 = document.getElementById('menu-list-item2');
-        const menuListItem3 = document.getElementById('menu-list-item3');
-        const homeTab1 = document.getElementById('home-tab1');
-        const homeTab2 = document.getElementById('home-tab2');
-        const homeTab3 = document.getElementById('home-tab3');
-        const contentBox = document.getElementById('box-content');
-        const contentHowToPlay = document.getElementById('content-howToPlay');
-        const howToPlayBox = document.getElementById('box-howToPlay');
-        const howToPlayTab = document.getElementById('howToPlay-tab');
-        const howToPlayContent = document.getElementById('howToPlay-content');
-        const returnBtn = document.getElementById('howToPlay-content-return-btn');
-        const titleBox = document.getElementById('howToPlay-content-title-box');
-        const titleH = document.getElementById('howToPlay-content-title');
-        const boxHeader = document.getElementById('box-header');
+      </div>
 
-        let isPhone = false
-        let system = "unknow";
-        window.onload = function () {
-            const ua = navigator.userAgent.toLowerCase();
-            const testUa = regexp => regexp.test(ua);
-            if (testUa(/windows|win32|win64|wow32|wow64/g)) {
-                system = "windows"; // windows系统
-            } else if (testUa(/macintosh|macintel/g)) {
-                system = "macos"; // macos系统
-            } else if (testUa(/x11/g)) {
-                system = "linux"; // linux系统
-            } else if (testUa(/android|adr/g)) {
-                system = "android"; // android系统
-            } else if (testUa(/ios|iphone|ipad|ipod|iwatch/g)) {
-                system = "ios"; // ios系统
-            }
-            if (system === 'ios') {
-                btnGoogle.style.display = 'none';
-                btnAndroid.style.display = 'none';
-                boxGoogle.style.display = 'none';
-                boxAndroid.style.display = 'none';
-            }
-            if (system === 'android') {
-                btnApple.style.display = 'none';
-                boxApple.style.display = 'none';
-            }
-            howToPlayBox.style.display = 'none';
-            judgeIsPhone();
-        }
-        btnAndroid.onclick = () => {
-            window.open("./assets/packages/tongits-kingdom.apk");
-        }
-        boxAndroid.onclick = () => {
-            window.open("./assets/packages/tongits-kingdom.apk");
-        }
-        menuListItem1.onclick = () => {
-            menuListItem1.classList.add("navactive-home-menu");
-            menuListItem2.classList.remove("navactive-home-menu");
-            menuListItem3.classList.remove("navactive-home-menu");
-        }
-        menuListItem2.onclick = () => {
-            menuListItem2.classList.add("navactive-home-menu");
-            menuListItem1.classList.remove("navactive-home-menu");
-            menuListItem3.classList.remove("navactive-home-menu");
-        }
-        menuListItem3.onclick = () => {
-            menuListItem3.classList.add("navactive-home-menu");
-            menuListItem1.classList.remove("navactive-home-menu");
-            menuListItem2.classList.remove("navactive-home-menu");
-        }
+      <div id="box-howToPlay">
+        <div id="content-howToPlay" class="content-howToPlay">
+          <div id="howToPlay-tab" class="howToPlay-tab">
+            <div class="tab pt-10" onclick="showTab(0)">Tongits Rules</div>
+            <div class="tab" onclick="showTab(1)">How to play?</div>
+            <div class="tab" onclick="showTab(2)">Meld</div>
+            <div class="tab" onclick="showTab(3)">Winning</div>
+            <div class="tab" onclick="showTab(4)">POT Prize Pool Rules</div>
+            <div class="tab pb-10" onclick="showTab(5)">Button Description</div>
+          </div>
+          <div id="howToPlay-content" class="howToPlay-content">
+            <div
+              id="howToPlay-content-return-btn"
+              onclick="returnToTabList"
+              class="howToPlay-content-return-btn"
+            >
+              <img src="./assets/imgs/howToPlay/return.png" alt="" />
+            </div>
 
-        let height = 0, display = false, timer, ifShow = false;
-            
-        const step = function() {
-            height = display? (height + 10): (height - 10);
-            if (height < 0) {
-                height = 0;    
-            } else if (height > 150) {
-                height = 150;    
-            }
-            menuList.style.height = height + "px";
-            if (height > 0 && height < 150) {
-                timer = setTimeout(step, 30);
-            }
-        };
-        
-        function judgeIfOpenMenu() {
-            menuList.style.display = ifShow ? 'none' : 'block';
-            if (timer) clearTimeout(timer)
-            display = !display;
-            step();
-            return false;
-        }
-        menuButton.onclick = judgeIfOpenMenu;
+            <div
+              id="howToPlay-content-title-box"
+              class="howToPlay-content-title-box"
+            >
+              <h3 id="howToPlay-content-title" style="text-align: center"></h3>
+            </div>
+            <!-- 内容区域 -->
+            <div id="tab1Content" class="howToPlay-content-div">
+              <p>
+                Tongits Kingdom is a popular mobile app version of the classic
+                Filipino card game, Tongits.
+              </p>
+              <p>
+                The goal of the game is to form sets or "melds" of three or more
+                cards of the same rank and suit, such as three 9s of hearts or
+                three Jacks of spades. Players can also form meld called "Secret
+                Meld" which consist of Four of a Kind or Straight Flush
+              </p>
+              <p>
+                On every turn, players can draw one card from the deck or pick
+                up one card from the discarded pile. They can then either form
+                melds with their cards, add cards to existing melds, or discard
+                one card to the discard pile. The game continues until one
+                player wins by either going "Tongits" (having a meld of zero
+                point value with all cards exposed) or having the lowest point
+                value remaining in their hand when the deck runs out.
+              </p>
+              <p>
+                In Tongits Kingdom, players can also participate in fights and
+                challenges with other players to gain an advantage. A fight is
+                initiated by placing a meld on the table and no player dropping
+                a card on it during the round. A challenge is initiated by a
+                player who believes they have the lowest point value remaining
+                in their hand.
+              </p>
+              <h3>◆Service Fee</h3>
+              <p>
+                The system deducts 5% of the winner's winnings as a service fee.
+              </p>
+            </div>
+            <div
+              id="tab2Content"
+              class="howToPlay-content-div"
+              style="display: none"
+            >
+              <p>
+                1.Tongits is a game played by 3 players using a deck of 52
+                standard playing cards. Each player starts with 12 cards, except
+                for the starting player who has 13 cards. The remaining cards
+                are placed in the central stack.
+              </p>
+              <p>
+                2.At the beginning of each game, the cards will be shuffled.
+                After determining the starting player, the system will deal the
+                cards clockwise while the players play counterclockwise.
+              </p>
+              <p>
+                3.The starting player is randomly selected for the first game,
+                while the winner of the previous game goes first in the second
+                game. If the starting player quits during a game, a new starting
+                player will be randomly selected in the next round.
+              </p>
+              <p>
+                4.When it is the player's turn, the player's avatar will show a
+                countdown which if it ends and the player has not played any
+                card, the system will automatically dump the highest card.
+              </p>
+              <p>
+                5.After the previous player dumped the card. If this card can be
+                grouped by the next player's card, the player can choose to take
+                the dumped card or draw a new card from the draw pile. If this
+                card could not be grouped, the next player will get a card from
+                the draw pile.
+              </p>
+              <p>
+                6.Next, the player must collect any possible hand melds and
+                discard any unnecessary cards. The process of picking and
+                discarding cards continues until a player wins by declaring
+                "Tong-its", calling a draw, or until there are no more cards
+                left in the central stack. If the central stack runs out, points
+                will be calculated from the cards in their hands, and the player
+                with the lowest total score wins. In the case of a tie, the
+                player who drew the last card from the central deck is declared
+                as the winner.
+              </p>
+              <p>
+                7.Cards that can be added to all exposed sets of cards cannot be
+                discarded.
+              </p>
+              <p>
+                8.When each countdown ends, if the player has not taken any
+                action, the system will automatically draw a card or discard
+                one. For offline players, the system will take over and perform
+                the draw or discard actions on behalf of the offline player.
+              </p>
+            </div>
+            <div
+              id="tab3Content"
+              class="howToPlay-content-div"
+              style="display: none"
+            >
+              <div>
+                <p>
+                  1.Melds are sets of cards that are grouped together in a
+                  specific way. While melds do not directly contribute points to
+                  a player's score, they are an important part of the game
+                  strategy. This is because certain melds can help players to
+                  reduce the point count in their hand by allowing them to get
+                  rid of high-scoring cards.
+                </p>
+                <p>
+                  In a Tongits duel, players may try to form sets and melds to
+                  gain an advantage over their opponents. However, if a player
+                  does not have any sets or melds in the show card or special
+                  card during a duel, their cards will be burned.
+                </p>
+              </div>
+              <div>
+                <p>2.Types of meld:</p>
+                <p>
+                  Sets: A set consists of three cards of the same rank. For
+                  example, a set can be made up of three Kings, three 7s, or
+                  three Aces.
+                </p>
+                <p>
+                  Run: A run consists of three or more cards of consecutive
+                  ranks in the same suit. For example, a run can be made up of
+                  3♥️, 4♥️, and 5♥️, or 8♠️, 9♠️, 10♠️, and J♠️.
+                </p>
+                <br />
+                <div>
+                  <p>Three of a Kind: three equally ranked cards</p>
+                  <img src="./assets/imgs/howToPlay/AAA.png" alt="" />
+                </div>
+                <div>
+                  <p>Four of a Kind: four cards of the same rank/number</p>
+                  <img src="./assets/imgs/howToPlay/KKKK.png" alt="" />
+                </div>
+                <div>
+                  <p>
+                    Straight Flush: At least three consecutive cards of the
+                    suit.
+                  </p>
+                  <img src="./assets/imgs/howToPlay/234.png" alt="" />
+                  <img src="./assets/imgs/howToPlay/678910J.png" alt="" />
+                </div>
+                <div>
+                  <p>
+                    Secret Meld: Four cards of the same rank or five or more
+                    consecutive card of the same suit.
+                  </p>
+                  <img src="./assets/imgs/howToPlay/kkkksc.png" alt="" />
+                  <img src="./assets/imgs/howToPlay/a2345sc.png" alt="" />
+                </div>
+              </div>
+              <p>
+                At the end of the game, a player with a Secret Meld in their
+                hand will not have their cards burned.
+              </p>
+              <p>
+                If a player contains only normal meld sets and there are no
+                exposed sets on the table, they are not allowed to initiate a
+                Fight or Challenge.
+              </p>
+              <p>
+                A player with a Secret Meld can participate in a Fight initiated
+                by another player, even if they have no exposed sets on the
+                table.
+              </p>
+              <p></p>
+              <p></p>
+            </div>
+            <div
+              id="tab4Content"
+              class="howToPlay-content-div"
+              style="display: none"
+            >
+              <p>
+                Try to play all your cards as quickly as possible before the
+                remaining cards are depleted. The fewer cards in your hand, the
+                lower the total point value, and the greater the chance of
+                winning.
+              </p>
+              <br />
 
-        function judgeIsPhone() {
-            if (document.body.clientWidth > 1000) {
-                ifShow = false;
-                menuList.style.display = 'none';
-                isPhone = false;
-            } else {
-                isPhone = true;
-            }
-        }
+              <h3>ADDITIONAL DETAILS</h3>
+              <h4>◆Tongits</h4>
+              <p>
+                If a player can put all their cards in the open area or discard
+                them all, and the total point value of the meld is 0,then the
+                player wins with Tongits.
+              </p>
+              <br />
 
-        window.onresize = judgeIsPhone;
+              <h4>◆Fight</h4>
+              <p>
+                To start a fight, the player needs to put down a meld onto the
+                table, and no player drops any card on any of his/her meld in
+                that round.
+              </p>
+              <br />
 
-        btnGoogle.onclick = function() {
-            window.open('https://play.google.com/store/apps/details?id=com.stotsenberg.tongitskingdom');
-        }
-        btnApple.onclick = function() {
-            window.open('https://apps.apple.com/ph/app/tongits-kingdom/id1658682891');
-        }
-        boxGoogle.onclick = function() {
-            window.open('https://play.google.com/store/apps/details?id=com.stotsenberg.tongitskingdom');
-        }
-        boxApple.onclick = function() {
-            window.open('https://apps.apple.com/ph/app/tongits-kingdom/id1658682891');
-        }
+              <h4>◆Challenge</h4>
+              <p>
+                When a player initiates a fight, if there is a meld on the show
+                cards or a player has a special card, another player can
+                challenge. Players can accept or fold. If a player fails to
+                choose either accept or fold, after the countdown, the system
+                will automatically fold the player's card.
+              </p>
+              <br />
 
-        function switchHomeTab(index = 0, fromSmall = false) {
-            isPhone = fromSmall;
-            // resetBoxHeaderCss();
-            switch (index) {
-                case 0:
-                    contentBox.style.display = 'block';
-                    howToPlayBox.style.display = 'none';
-                    homeTab1.classList.add("li-bottom-border");
-                    homeTab2.classList.remove("li-bottom-border");
-                    app.style.backgroundImage = 'url("./assets/imgs/background.png")';
-                    document.body.style.backgroundColor = '#ffd0ca';
-                    if (isPhone) {
-                        judgeIfOpenMenu();
-                    }
-                    break;
-                case 1:
-                    contentBox.style.display = 'none';
-                    howToPlayBox.style.display = 'block';
-                    howToPlayBox.style.backgroundColor = '#7f70ef';
-                    app.style.backgroundImage = 'none';
-                    document.body.style.backgroundColor = '#7f70ef';
-                    homeTab1.classList.remove("li-bottom-border");
-                    homeTab2.classList.add("li-bottom-border");
-                    if (isPhone) {
-                        howToPlayTab.style.flex = 1;
-                        howToPlayTab.style.display = 'block';
-                        howToPlayContent.style.flex = 0;
-                        howToPlayContent.style.display = 'none';
-                        judgeIfOpenMenu();
-                    } else {
-                        const tabs = document.querySelectorAll('.tab');
-                        tabs[0].classList.add('active');
-                    }
-                    break;
-                case 2:
-                    window.open('https://secure.livechatinc.com/licence/14347593/v2/open_chat.cgi');
-                default:
-                    break;
-            }
-        }
+              <h4>◆Burned</h4>
+              <p>
+                If a player does not have any meld in their open card area or
+                any secret set in their hand, the cards will be burned.
+              </p>
+              <br />
 
-        const titleList = [
-            'Tongits Rules',
-            'How to play',
-            'Meld',
-            'Winning',
-            'POT Prize Pool Rules',
-            'Button Description',
-        ];
+              <h4>◆End of the Game</h4>
+              <p>
+                When all the cards have been drawn from the deck, the game ends.
+              </p>
+              <p>
+                Players without a meld or secret meld set in the open area will
+                be burned and lose the game. The player with the lowest
+                remaining point value wins.
+              </p>
+              <br />
 
-        // JavaScript 函数用于切换选项卡
-        function showTab(tabIndex) {
-            // 获取所有的标签和内容
-            const tabs = document.querySelectorAll('.tab');
-            const contents = document.querySelectorAll('.howToPlay-content-div');
+              <h4>◆Early Exit & Disconnection</h4>
+              <p>
+                If a player exits or disconnects during the game, they will
+                enter into an AI mode, where the AI will automatically play the
+                game for them. Players can reconnect to the room to continue
+                playing the game if the game is still ongoing. Otherwise, they
+                will enter into a new game again.
+              </p>
+              <br />
 
-            // 隐藏所有内容
-            for (let i = 0; i < contents.length; i++) {
-                contents[i].style.display = 'none';
-                tabs[i].classList.remove('active');
-            }
-            // 显示所选内容和标签
-            contents[tabIndex].style.display = 'block';
-            tabs[tabIndex].classList.add('active');
-            
-            if (isPhone) {
-                const screenWidth = window.innerWidth;
-                howToPlayTab.style.display = 'none';
-                howToPlayTab.style.flex = 0;
-                contentHowToPlay.style.width = `${screenWidth}px`;
-                howToPlayContent.style.display = 'block';
-                howToPlayContent.style.flex = 1;
-                howToPlayContent.style.padding = '10px';
+              <h4>◆Tie-breaker</h4>
+              <p>
+                If a player initiates a challenge, and two players have the same
+                point value, the player who accepts the challenge wins. If three
+                players have the same point value, the player (player 1) who
+                initiates the challenge's next player (player 2) wins.
+              </p>
+              <p>
+                If all cards have been drawn and multiple players have the same
+                minimum point value, the player who drew the last card wins. If
+                the player who drew the last card has the highest point value,
+                and the other two players have the same lower point value, then
+                the next player who drew the last card wins.
+              </p>
+              <br />
 
-                returnBtn.style.display = 'block';
-                titleBox.style.display = 'block';
-                titleH.innerHTML = titleList[tabIndex];
+              <h4>◆Card Points</h4>
+              <div>
+                <p>(A)Ace represents 1 point.</p>
+                <div style="display: flex; align-items: center">
+                  <img
+                    class="d-inline-block mr-10"
+                    src="./assets/imgs/howToPlay/A.png"
+                    alt=""
+                  />
+                  <p>= 1</p>
+                </div>
+                <p>All J Q K represent 10 points.</p>
+                <div style="display: flex; align-items: center">
+                  <img
+                    class="d-inline-block mr-10"
+                    src="./assets/imgs/howToPlay/JQK.png"
+                    alt=""
+                  />
+                  <p>= 10</p>
+                </div>
+                <p>
+                  All other cards (2 3 4 5 6 7 8 9 10) are worth their own point
+                  value.
+                </p>
+              </div>
+              <br />
 
-                // setBoxHeaderCss();
-            }
-        }
+              <h4>◆Bonus Cards</h4>
+              <p>
+                A and K in the winner's meld or hand count as bonus cards. For
+                each A or K in the winning meld or hand, the bonus increases by
+                1.
+              </p>
+              <p>
+                A and K placed in the winner's meld by other players, or A and K
+                placed in other players' melds by the winner, do not count as
+                bonus cards.
+              </p>
+              <br />
 
-        function setBoxHeaderCss() {
-            boxHeader.style.position = 'fixed';
-            boxHeader.style.backgroundColor = '#7e68e8';
-            howToPlayBox.style.marginTop = '136px';
-        }
+              <h4>◆Bonus Count</h4>
+              <p>Normal win: 1</p>
+              <p>Tongits: 1</p>
+              <p>Win challenge: 2</p>
+              <p>
+                Special Card (A/K card): 1 (multiplied by the number of A/K
+                cards in the winning meld)
+              </p>
+              <img src="./assets/imgs/howToPlay/ak.png" alt="" />
+              <p>Secret Meld: 1 (multiplied by the number of secret meld)</p>
+              <img src="./assets/imgs/howToPlay/kkkksc.png" alt="" />
+              <br />
 
-        function resetBoxHeaderCss() {
-            boxHeader.style.position = 'static';
-            boxHeader.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
-            howToPlayBox.style.marginTop = '0';
-        }
+              <h4>◆Settlement Rules</h4>
+              <p>
+                Winner’s coins = (normal win + tongits win + challenge win +
+                special card win x no. of cards + secret meld win x no. of
+                cards) x bet amount x multiplier - service fee
+              </p>
+              <p>
+                Loser’s coins = (normal win + tongits win + challenge win +
+                special card win x no. of cards + secret meld win x no. of cards
+                + burned) x bet amount x multiplier - service fee
+              </p>
+              <p>
+                * After winning, if there are no tongits , special card, secret
+                meld or special rewards, these will be recorded as 0 in the
+                computation.
+              </p>
+              <p>
+                * If a player has a “challenge win”, the “burned” will be 0. If
+                a player has “burned”, the “challenge win” will be 0.
+              </p>
+              <p></p>
+              <br />
+            </div>
+            <div
+              id="tab5Content"
+              class="howToPlay-content-div"
+              style="display: none"
+            >
+              <p>
+                1.At the start of each game, each player will contribute X coins
+                to the POT prize pool. (X is the base score of the room, for
+                example, when entering the newbie room with a base score of 1, 1
+                coin will automatically be deducted and added to the POT prize
+                pool)
+              </p>
+              <p>
+                2.The player who wins each game will receive a crown, and a
+                player who wins two consecutive crowns will win all the coins in
+                the POT prize pool.
+              </p>
+              <p>
+                3.The number on the crown represents the game number, 1 for the
+                first game, 2 for the second game, and so on.
+              </p>
+              <p>
+                4.If a player exits the room during the game, the coins they
+                contributed to the POT prize pool will remain in the pool and
+                will be won by other players in the end. Therefore, no refunds
+                will be issued.
+              </p>
+            </div>
+            <div
+              id="tab6Content"
+              class="howToPlay-content-div"
+              style="display: none"
+            >
+              <div>
+                <p>
+                  <span class="text-bold">● Draw:</span> Draw a card from the
+                  deck.
+                </p>
+                <img src="./assets/imgs/howToPlay/text_draw.png" alt="" />
+              </div>
 
-        returnBtn.onclick =  () => {
-            howToPlayTab.style.display = 'block';
+              <div>
+                <p>
+                  <span class="text-bold">● Chow:</span> Combine a card from the
+                  previous player with your own cards to form a group and place
+                  it in the exposed cards area. If you can form a group with a
+                  card from the previous player and your own cards, it will
+                  appear. Clicking on Chow or the card discarded by the previous
+                  player will automatically place it in the exposed cards area.
+                  If there are multiple meld, you must click on the meld that
+                  you do not need to take it back to your hand.
+                </p>
+                <img src="./assets/imgs/howToPlay/text_chow.png" alt="" />
+              </div>
+
+              <div>
+                <p>
+                  <span class="text-bold">● Group:</span> Combine the selected
+                  cards together. Green groups can be placed in the exposed
+                  cards area, while red groups cannot.
+                </p>
+                <img src="./assets/imgs/howToPlay/text_group.png" alt="" />
+              </div>
+
+              <div>
+                <p>
+                  <span class="text-bold">● Drop:</span> Place combined cards
+                  from your hand in your own exposed cards area.
+                </p>
+                <img src="./assets/imgs/howToPlay/text_drop.f.png" alt="" />
+              </div>
+
+              <div>
+                <p>
+                  <span class="text-bold">● Sapaw:</span> ●Place a card on a
+                  card in the exposed cards area that can be combined with it.
+                </p>
+                <img src="./assets/imgs/howToPlay/text_sapaw.png" alt="" />
+              </div>
+
+              <div>
+                <p>
+                  <span class="text-bold">● Dump:</span> Discard a card to the
+                  discard pile.
+                </p>
+                <img src="./assets/imgs/howToPlay/text_dump.png" alt="" />
+              </div>
+
+              <div>
+                <p>
+                  <span class="text-bold">● Fight:</span> ●Initiate a duel to
+                  compare the point values with other players to determine the
+                  winner of the game.
+                </p>
+                <img src="./assets/imgs/howToPlay/text_fight.png" alt="" />
+              </div>
+
+              <div>
+                <p>
+                  <span class="text-bold">● Challenge:</span> ●Accept a duel to
+                  compare the point values with other players to determine the
+                  winner of the game.
+                </p>
+                <img src="./assets/imgs/howToPlay/text_challenge.png" alt="" />
+              </div>
+
+              <div>
+                <p>
+                  <span class="text-bold">● Fold:</span> Give up the duel and
+                  concede the game.
+                </p>
+                <img src="./assets/imgs/howToPlay/text_fold.png" alt="" />
+              </div>
+
+              <div>
+                <p>
+                  <span class="text-bold">● Sort Again:</span> ●Sort your hand
+                  in order of cards with the same suit or in order of combined
+                  cards and point values.
+                </p>
+                <img src="./assets/imgs/howToPlay/btn_order.png" alt="" />
+              </div>
+
+              <p>
+                Upon starting the game, players will enter a preparation phase
+                and must wait for all three players to be ready before the game
+                starts. If a player disconnects or leaves during this time, the
+                system will take over until the player reconnects to the game.
+                After each match, there is a 10 seconds preparation period for
+                the next match. If a player does not prepare within 10 seconds,
+                they will automatically exit the room.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>
+        <a href="./views/privacy.html">Privacy Policy</a> |
+        <a href="./views/service.html">Term Service</a>
+      </p>
+      <p>Contact us by Email</p>
+    </div>
+  </body>
+  <script>
+    /** 获取 element */
+    const app = document.getElementById("app");
+    // const btnGoogle = document.getElementById("btn-google");
+    const btnApple = document.getElementById("btn-apple");
+    const btnAndroid = document.getElementById("btn-android");
+    // const boxGoogle = document.getElementById("box-google");
+    const boxApple = document.getElementById("box-apple");
+    const boxAndroid = document.getElementById("box-android");
+    const menuBar = document.getElementById("menu-bar");
+    const menuButton = document.getElementById("menu-button");
+    const menuList = document.getElementById("menu-list");
+    const menuListItem1 = document.getElementById("menu-list-item1");
+    const menuListItem2 = document.getElementById("menu-list-item2");
+    const menuListItem3 = document.getElementById("menu-list-item3");
+    const homeTab1 = document.getElementById("home-tab1");
+    const homeTab2 = document.getElementById("home-tab2");
+    const homeTab3 = document.getElementById("home-tab3");
+    const contentBox = document.getElementById("box-content");
+    const contentHowToPlay = document.getElementById("content-howToPlay");
+    const howToPlayBox = document.getElementById("box-howToPlay");
+    const howToPlayTab = document.getElementById("howToPlay-tab");
+    const howToPlayContent = document.getElementById("howToPlay-content");
+    const returnBtn = document.getElementById("howToPlay-content-return-btn");
+    const titleBox = document.getElementById("howToPlay-content-title-box");
+    const titleH = document.getElementById("howToPlay-content-title");
+    const boxHeader = document.getElementById("box-header");
+
+    let isPhone = false;
+    let system = "unknow";
+    window.onload = function () {
+      const ua = navigator.userAgent.toLowerCase();
+      const testUa = (regexp) => regexp.test(ua);
+      if (testUa(/windows|win32|win64|wow32|wow64/g)) {
+        system = "windows"; // windows系统
+      } else if (testUa(/macintosh|macintel/g)) {
+        system = "macos"; // macos系统
+      } else if (testUa(/x11/g)) {
+        system = "linux"; // linux系统
+      } else if (testUa(/android|adr/g)) {
+        system = "android"; // android系统
+      } else if (testUa(/ios|iphone|ipad|ipod|iwatch/g)) {
+        system = "ios"; // ios系统
+      }
+      if (system === "ios") {
+        // btnGoogle.style.display = "none";
+        btnAndroid.style.display = "none";
+        // boxGoogle.style.display = "none";
+        boxAndroid.style.display = "none";
+      }
+      if (system === "android") {
+        btnApple.style.display = "none";
+        boxApple.style.display = "none";
+      }
+      howToPlayBox.style.display = "none";
+      judgeIsPhone();
+    };
+    btnAndroid.onclick = () => {
+      window.open("./assets/packages/tongits-kingdom.apk");
+    };
+    boxAndroid.onclick = () => {
+      window.open("./assets/packages/tongits-kingdom.apk");
+    };
+    menuListItem1.onclick = () => {
+      menuListItem1.classList.add("navactive-home-menu");
+      menuListItem2.classList.remove("navactive-home-menu");
+      menuListItem3.classList.remove("navactive-home-menu");
+    };
+    menuListItem2.onclick = () => {
+      menuListItem2.classList.add("navactive-home-menu");
+      menuListItem1.classList.remove("navactive-home-menu");
+      menuListItem3.classList.remove("navactive-home-menu");
+    };
+    menuListItem3.onclick = () => {
+      menuListItem3.classList.add("navactive-home-menu");
+      menuListItem1.classList.remove("navactive-home-menu");
+      menuListItem2.classList.remove("navactive-home-menu");
+    };
+
+    let height = 0,
+      display = false,
+      timer,
+      ifShow = false;
+
+    const step = function () {
+      height = display ? height + 10 : height - 10;
+      if (height < 0) {
+        height = 0;
+      } else if (height > 150) {
+        height = 150;
+      }
+      menuList.style.height = height + "px";
+      if (height > 0 && height < 150) {
+        timer = setTimeout(step, 30);
+      }
+    };
+
+    function judgeIfOpenMenu() {
+      menuList.style.display = ifShow ? "none" : "block";
+      if (timer) clearTimeout(timer);
+      display = !display;
+      step();
+      return false;
+    }
+    menuButton.onclick = judgeIfOpenMenu;
+
+    function judgeIsPhone() {
+      if (document.body.clientWidth > 1000) {
+        ifShow = false;
+        menuList.style.display = "none";
+        isPhone = false;
+      } else {
+        isPhone = true;
+      }
+    }
+
+    window.onresize = judgeIsPhone;
+
+    // btnGoogle.onclick = function () {
+    //   window.open(
+    //     "https://play.google.com/store/apps/details?id=com.stotsenberg.tongitskingdom"
+    //   );
+    // };
+    btnApple.onclick = function () {
+      window.open("https://apps.apple.com/ph/app/tongits-kingdom/id1658682891");
+    };
+    // boxGoogle.onclick = function () {
+    //   window.open(
+    //     "https://play.google.com/store/apps/details?id=com.stotsenberg.tongitskingdom"
+    //   );
+    // };
+    boxApple.onclick = function () {
+      window.open("https://apps.apple.com/ph/app/tongits-kingdom/id1658682891");
+    };
+
+    function switchHomeTab(index = 0, fromSmall = false) {
+      isPhone = fromSmall;
+      // resetBoxHeaderCss();
+      switch (index) {
+        case 0:
+          contentBox.style.display = "block";
+          howToPlayBox.style.display = "none";
+          homeTab1.classList.add("li-bottom-border");
+          homeTab2.classList.remove("li-bottom-border");
+          app.style.backgroundImage = 'url("./assets/imgs/background.png")';
+          document.body.style.backgroundColor = "#ffd0ca";
+          if (isPhone) {
+            judgeIfOpenMenu();
+          }
+          break;
+        case 1:
+          contentBox.style.display = "none";
+          howToPlayBox.style.display = "block";
+          howToPlayBox.style.backgroundColor = "#7f70ef";
+          app.style.backgroundImage = "none";
+          document.body.style.backgroundColor = "#7f70ef";
+          homeTab1.classList.remove("li-bottom-border");
+          homeTab2.classList.add("li-bottom-border");
+          if (isPhone) {
             howToPlayTab.style.flex = 1;
-            contentHowToPlay.style.width = '900px';
-            howToPlayContent.style.display = 'none';
+            howToPlayTab.style.display = "block";
             howToPlayContent.style.flex = 0;
+            howToPlayContent.style.display = "none";
+            judgeIfOpenMenu();
+          } else {
+            const tabs = document.querySelectorAll(".tab");
+            tabs[0].classList.add("active");
+          }
+          break;
+        case 2:
+          window.open(
+            "https://secure.livechatinc.com/licence/14347593/v2/open_chat.cgi"
+          );
+        default:
+          break;
+      }
+    }
 
-            // resetBoxHeaderCss();
+    const titleList = [
+      "Tongits Rules",
+      "How to play",
+      "Meld",
+      "Winning",
+      "POT Prize Pool Rules",
+      "Button Description",
+    ];
 
-            returnBtn.style.display = 'none';
-            titleBox.style.display = 'none';
-            titleH.innerHTML = '';
-        }
-    </script>
+    // JavaScript 函数用于切换选项卡
+    function showTab(tabIndex) {
+      // 获取所有的标签和内容
+      const tabs = document.querySelectorAll(".tab");
+      const contents = document.querySelectorAll(".howToPlay-content-div");
+
+      // 隐藏所有内容
+      for (let i = 0; i < contents.length; i++) {
+        contents[i].style.display = "none";
+        tabs[i].classList.remove("active");
+      }
+      // 显示所选内容和标签
+      contents[tabIndex].style.display = "block";
+      tabs[tabIndex].classList.add("active");
+
+      if (isPhone) {
+        const screenWidth = window.innerWidth;
+        howToPlayTab.style.display = "none";
+        howToPlayTab.style.flex = 0;
+        contentHowToPlay.style.width = `${screenWidth}px`;
+        howToPlayContent.style.display = "block";
+        howToPlayContent.style.flex = 1;
+        howToPlayContent.style.padding = "10px";
+
+        returnBtn.style.display = "block";
+        titleBox.style.display = "block";
+        titleH.innerHTML = titleList[tabIndex];
+
+        // setBoxHeaderCss();
+      }
+    }
+
+    function setBoxHeaderCss() {
+      boxHeader.style.position = "fixed";
+      boxHeader.style.backgroundColor = "#7e68e8";
+      howToPlayBox.style.marginTop = "136px";
+    }
+
+    function resetBoxHeaderCss() {
+      boxHeader.style.position = "static";
+      boxHeader.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
+      howToPlayBox.style.marginTop = "0";
+    }
+
+    returnBtn.onclick = () => {
+      howToPlayTab.style.display = "block";
+      howToPlayTab.style.flex = 1;
+      contentHowToPlay.style.width = "900px";
+      howToPlayContent.style.display = "none";
+      howToPlayContent.style.flex = 0;
+
+      // resetBoxHeaderCss();
+
+      returnBtn.style.display = "none";
+      titleBox.style.display = "none";
+      titleH.innerHTML = "";
+    };
+  </script>
 </html>
