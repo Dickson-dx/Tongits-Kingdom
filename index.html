@@ -72,7 +72,7 @@
       id="app"
       style="
         width: 100%;
-        background-image: url('./assets/imgs/background.png');
+        background-image: url('./assets/imgs/android_huanpi/background.png');
         background-repeat: no-repeat;
       "
     >
@@ -87,7 +87,7 @@
         <div class="header">
           <div class="h-left">
             <img
-              src="./assets/imgs/icon.png"
+              src="./assets/imgs/android_huanpi/ic_launcher72.0.png"
               style="margin-right: 10px"
               alt=""
             />
@@ -136,19 +136,11 @@
         <div id="content" class="content">
           <div class="center-left">
             <div class="content-left-div1">
-              <img src="./assets/imgs/tongits.png" alt="" />
+              <img src="./assets/imgs/android_huanpi/logo.x.png" alt="" />
             </div>
             <div class="content-left-div2">
               <!-- <div id="btn-google" class="download-box" style="background-image: url('./assets/imgs/google.png');background-size: cover;">
                             </div> -->
-              <div
-                id="btn-apple"
-                class="download-box"
-                style="
-                  background-image: url('./assets/imgs/apple.png');
-                  background-size: cover;
-                "
-              ></div>
               <div
                 id="btn-android"
                 class="download-box"
@@ -157,36 +149,44 @@
                   background-size: cover;
                 "
               ></div>
+              <div
+                id="btn-apple"
+                class="download-box"
+                style="
+                  background-image: url('./assets/imgs/apple.png');
+                  background-size: cover;
+                "
+              ></div>
             </div>
           </div>
           <div class="center-right game-pic">
-            <img src="./assets/imgs/iphone.png" alt="" />
+            <img src="./assets/imgs/android_huanpi/iphone.png" alt="" />
           </div>
         </div>
 
         <div id="content-small">
           <div class="content-left-div1 animation-left-to-right">
-            <img src="./assets/imgs/tongits.png" alt="" />
+            <img src="./assets/imgs/android_huanpi/logo.x.png" alt="" />
           </div>
           <div class="center-right game-pic animation-right-to-left">
-            <img src="./assets/imgs/iphone.png" alt="" />
+            <img src="./assets/imgs/android_huanpi/iphone.png" alt="" />
           </div>
           <div class="content-left-div2 animation-left-to-right">
             <!-- <div id="box-google" class="download-box" style="background-image: url('./assets/imgs/google.png');background-size: cover;">
                         </div> -->
             <div
-              id="box-apple"
-              class="download-box"
-              style="
-                background-image: url('./assets/imgs/apple.png');
-                background-size: cover;
-              "
-            ></div>
-            <div
               id="box-android"
               class="download-box"
               style="
                 background-image: url('./assets/imgs/android.png');
+                background-size: cover;
+              "
+            ></div>
+            <div
+              id="box-apple"
+              class="download-box"
+              style="
+                background-image: url('./assets/imgs/apple.png');
                 background-size: cover;
               "
             ></div>
@@ -690,6 +690,8 @@
       </p>
       <p>Contact us by Email</p>
     </div>
+
+    <div id="toast" class="hidden">Coming Soon</div>
   </body>
   <script>
     /** 获取 element */
@@ -809,13 +811,31 @@
 
     window.onresize = judgeIsPhone;
 
+    const toast = document.getElementById("toast");
+
+    function toastMsg() {
+      // 显示提示
+      toast.style.display = "block";
+      toast.style.opacity = 1;
+
+      // 设置定时器，2秒后自动隐藏提示
+      setTimeout(function () {
+        toast.style.opacity = 0;
+        setTimeout(function () {
+          toast.style.display = "none";
+        }, 300); // 渐隐动画时间为300毫秒
+      }, 2000); // 显示2秒后自动消失
+    }
+
     // btnGoogle.onclick = function () {
     //   window.open(
     //     "https://play.google.com/store/apps/details?id=com.stotsenberg.tongitskingdom"
     //   );
     // };
     btnApple.onclick = function () {
-      window.open("https://apps.apple.com/ph/app/tongits-kingdom/id1658682891");
+      console.log("123123");
+      toastMsg();
+      //   window.open("https://apps.apple.com/ph/app/tongits-kingdom/id1658682891");
     };
     // boxGoogle.onclick = function () {
     //   window.open(
@@ -823,7 +843,9 @@
     //   );
     // };
     boxApple.onclick = function () {
-      window.open("https://apps.apple.com/ph/app/tongits-kingdom/id1658682891");
+      console.log("123123");
+      toastMsg();
+      //   window.open("https://apps.apple.com/ph/app/tongits-kingdom/id1658682891");
     };
 
     function switchHomeTab(index = 0, fromSmall = false) {
@@ -835,7 +857,8 @@
           howToPlayBox.style.display = "none";
           homeTab1.classList.add("li-bottom-border");
           homeTab2.classList.remove("li-bottom-border");
-          app.style.backgroundImage = 'url("./assets/imgs/background.png")';
+          app.style.backgroundImage =
+            'url("./assets/imgs/android_huanpi/background.png")';
           document.body.style.backgroundColor = "#ffd0ca";
           if (isPhone) {
             judgeIfOpenMenu();
